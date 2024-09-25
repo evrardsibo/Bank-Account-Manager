@@ -1,17 +1,17 @@
-from banques import Banks
-
-
+count = [ ]
 class Coustomrs :
-    def __init__(self , first_name , last_name , age , bank) :
+    def __init__(self , first_name , last_name , age , date) :
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
-        self.bank = bank
+        self.count = count
+        self.date = date
 
-    def __str__(self) :
-        return self.first_name + self.last_name + self.age + self.bank.name
+    def create_account(self , account_number) :
+        self.count.append( account_number )
 
+    def balence(self) :
+        return sum( self.count )
 
-bank1 = Banks( "ING" )
-coustome = Coustomrs( "Evrard" , "sibo" , 40 , bank1 )
-print(coustome.bank.name)
+    # def __str__(self) :
+    #     return self.first_name + self.last_name + self.age + self.bank.name
