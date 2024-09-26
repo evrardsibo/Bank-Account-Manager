@@ -10,8 +10,8 @@ class Coustomrs :
     def create_account(self , account_number) :
         self.count.append( account_number )
 
-    def balence(self) :
-        return sum( self.count )
+    # def balence(self) :
+    #     return sum( self.count )
 
     # def __str__(self) :
     #     return self.first_name + self.last_name + self.age + self.bank.name
